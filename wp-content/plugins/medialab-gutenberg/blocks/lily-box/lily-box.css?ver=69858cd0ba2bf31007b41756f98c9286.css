@@ -1,0 +1,47 @@
+.lily-box{
+	position: relative;
+	overflow: hidden;
+}
+.lily-box .content{
+	left: 10%;
+	width: 90%;
+	z-index: 999;
+	position: absolute;
+	top: 100%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	padding: 50px;
+	transition: all 0.4s;
+	border-left-width: 3px;
+  	border-left-style: solid;
+}
+.lily-box .content .text{
+	opacity: 0;
+	transition: all 0.4s;
+}
+.lily-box .content .title{
+	position: relative;
+	margin-left: 70px;
+}
+.lily-box .content .title:before{
+	content: "";
+	display: inline-block;
+	width: 4em;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: -5em;
+	border-style: solid;
+	border-width: 1px 0 0;
+	}
+.lily-box .content:hover{
+	top: 70%;
+}
+.lily-box .content:hover .text{
+	opacity: 1;
+}
+.lily-box img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}

@@ -1,0 +1,51 @@
+.backslide-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.backslide-block .content {
+  padding: 30px;
+}
+.backslide-block .content .heading {
+  margin-top: 30px;
+}
+.backslide-block .service_backslide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.backslide-block .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  transition: all 0.8s ease;
+}
+.backslide-block .bg.top {
+  top: -100%;
+}
+.backslide-block .bg.left {
+  left: -100%;
+}
+.backslide-block .bg.right {
+  left: 100%;
+}
+.backslide-block .bg.bottom {
+  top: 100%;
+}
+.backslide-block:hover .bg {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+}

@@ -1,0 +1,19 @@
+.flipbox2{
+	position: relative;
+}
+.flipbox2 .content{
+	left: 20px;
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.flipbox2 .verso{
+  position: absolute;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.flipbox2:hover .verso{
+	opacity: 1;
+}

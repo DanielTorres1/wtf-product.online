@@ -1,0 +1,7 @@
+$(document).ready(function() {
+	$(".accordion-section:first-child .accordion-content").slideDown();
+    $(".accordion-section").on( "click", function() {
+    	$(".accordion-content").slideUp();
+	  	$(this).find(".accordion-content").slideDown();
+	});
+});

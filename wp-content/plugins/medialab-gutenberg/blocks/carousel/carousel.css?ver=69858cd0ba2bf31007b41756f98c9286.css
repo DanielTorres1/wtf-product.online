@@ -1,0 +1,95 @@
+.owl-theme.img-carousel .owl-nav{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+}
+.owl-carousel.img-carousel .owl-nav span{
+	font-size: 60px;
+  	line-height: 44px;
+}
+.owl-carousel.img-carousel .owl-nav button.owl-next, .owl-carousel.img-carousel .owl-nav button.owl-prev, .owl-carousel.img-carousel button.owl-dot{
+	background: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.owl-theme.img-carousel .owl-nav [class*="owl-"]:hover{
+	background: #FD8B74;
+}
+
+.owl-carousel.img-carousel .owl-nav .owl-prev{
+	position: absolute;
+	left: 16%;
+}
+
+.owl-carousel.img-carousel .owl-nav .owl-next{
+	position: absolute;
+	right: 16%;
+}
+
+.owl-carousel[owl-hover="yes"] .content-slide{
+	opacity: 0;
+	color: #fff;
+	transition: all 0.4s;
+}
+.owl-carousel[owl-hover="yes"] .item:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: all 0.4s;
+}
+.owl-carousel[owl-hover="yes"] .item:hover .content-slide,.owl-carousel[owl-hover="yes"] .item:hover:before{
+	opacity: 1;
+}
+.partner-carousel[owl-hover="yes"] .item .content-slide-text{
+	position: absolute;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+.partner-carousel[owl-hover="yes"] .item:hover .content-slide-text{
+	opacity: 1;
+}
+.partner-carousel[owl-hover="yes"] .item::before {
+	background: rgba(0, 0, 0, 0.8);
+}
+.link-partner-carousel[owl-hover="yes"] .item .content-slide-text{
+	position: absolute;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+.link-partner-carousel[owl-hover="yes"] .item:hover .content-slide-text{
+	opacity: 1;
+}
+.link-partner-carousel[owl-hover="yes"] .item::before {
+	background: rgba(0, 0, 0, 0.8);
+}
+@media(max-width:969px){
+	.owl-theme.img-carousel .owl-nav{
+		top:inherit;
+		bottom: 10px;
+	}
+	.owl-carousel.img-carousel .owl-nav button.owl-next, .owl-carousel.img-carousel .owl-nav button.owl-prev, .owl-carousel.img-carousel button.owl-dot{
+		width: 25px;
+		height: 25px;
+		border-radius: inherit;
+	}
+	.owl-carousel.img-carousel .owl-nav span{
+		font-size: inherit;
+		line-height: inherit;
+	}
+}

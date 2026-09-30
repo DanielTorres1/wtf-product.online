@@ -1691,6 +1691,213 @@
 				padding: 60px 30px 0px !important;
 			}
 		}
+
+		/* ===== Modern Amazon Showcase Card ===== */
+		.amazon-deal-card {
+			background: #ffffff;
+			border-radius: 20px;
+			padding: 24px;
+			margin-top: 30px;
+			box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(238, 9, 121, 0.06);
+			border: 1px solid rgba(238, 9, 121, 0.15);
+			position: relative;
+			overflow: hidden;
+			transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+		}
+
+		.amazon-deal-card::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, #ee0979, #fc1c62, #ff6a00);
+		}
+
+		.amazon-deal-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 45px rgba(238, 9, 121, 0.16), 0 8px 20px rgba(0, 0, 0, 0.08);
+			border-color: rgba(238, 9, 121, 0.35);
+		}
+
+		.deal-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			background: linear-gradient(135deg, #ff6a00, #ee0979);
+			color: #ffffff;
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+			padding: 4px 12px;
+			border-radius: 30px;
+			margin-bottom: 16px;
+			box-shadow: 0 3px 10px rgba(238, 9, 121, 0.25);
+		}
+
+		.deal-content {
+			display: flex;
+			align-items: center;
+			gap: 22px;
+		}
+
+		@media (max-width: 600px) {
+			.deal-content {
+				flex-direction: column;
+				text-align: center;
+			}
+		}
+
+		.deal-image-wrapper {
+			flex-shrink: 0;
+			width: 140px;
+			height: 140px;
+			background: #fbfbfd;
+			border-radius: 14px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			border: 1px solid #f0f0f5;
+			transition: transform 0.3s ease;
+		}
+
+		.amazon-deal-card:hover .deal-image-wrapper {
+			transform: scale(1.05);
+		}
+
+		.deal-image {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+		}
+
+		.deal-info {
+			flex: 1;
+		}
+
+		.deal-rating {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-bottom: 6px;
+		}
+
+		@media (max-width: 600px) {
+			.deal-rating {
+				justify-content: center;
+			}
+		}
+
+		.deal-rating .stars {
+			color: #ffa41c;
+			letter-spacing: 2px;
+			font-size: 15px;
+		}
+
+		.deal-rating .rating-count {
+			font-size: 13px;
+			color: #767676;
+			font-weight: 500;
+		}
+
+		.deal-title {
+			margin: 0 0 6px 0;
+			font-size: 19px;
+			font-weight: 700;
+			line-height: 1.35;
+		}
+
+		.deal-title a {
+			color: #1a1a2e;
+			text-decoration: none;
+			transition: color 0.2s ease;
+		}
+
+		.deal-title a:hover {
+			color: #ee0979;
+		}
+
+		.deal-desc {
+			font-size: 14px;
+			color: #555566;
+			line-height: 1.5;
+			margin: 0 0 16px 0;
+		}
+
+		.deal-action {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 600px) {
+			.deal-action {
+				justify-content: center;
+			}
+		}
+
+		.amazon-cta-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: linear-gradient(135deg, #ff6a00, #ee0979);
+			color: #ffffff !important;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			padding: 10px 22px;
+			border-radius: 50px;
+			box-shadow: 0 4px 14px rgba(238, 9, 121, 0.3);
+			transition: all 0.25s ease;
+		}
+
+		.amazon-cta-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(238, 9, 121, 0.45);
+			background: linear-gradient(135deg, #ff512f, #fc1c62);
+			color: #ffffff !important;
+		}
+
+		.amazon-cta-btn .btn-arrow {
+			transition: transform 0.2s ease;
+		}
+
+		.amazon-cta-btn:hover .btn-arrow {
+			transform: translateX(4px);
+		}
+
+		.prime-tag {
+			font-size: 12px;
+			font-weight: 600;
+			color: #007185;
+			background: rgba(0, 113, 133, 0.08);
+			padding: 4px 10px;
+			border-radius: 6px;
+		}
+
+		.merch-image {
+			max-width: 100%;
+			height: auto;
+			object-fit: contain;
+			border-radius: 10px;
+		}
+
+		.shop-button {
+			display: inline-block;
+			background: linear-gradient(135deg, #ff6a00, #ee0979);
+			color: #ffffff !important;
+			padding: 10px 20px;
+			border-radius: 30px;
+			font-weight: 600;
+			font-size: 14px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
 	</style>
 
 </head>
@@ -1871,7 +2078,7 @@
 
 
 					<div class="wp-block-column is-vertically-aligned-center part-right is-layout-flow wp-block-column-is-layout-flow"
-						style="padding-right:300px;flex-basis:58%">
+						style="padding-right:60px;flex-basis:58%">
 						<p class="has-text-align-left has-text-color has-link-color wp-elements-b3163a8da250fb6deed01476b9a540cb"
 							style="color:#fc1c62;font-size:17px;text-transform:uppercase">WOMEN GIFTS</p>
 
@@ -1895,12 +2102,42 @@
 
 						<p>For example, you can offer an organic box, a tea box, containing local products without
 							alcohol or vegetarian, vegan and gluten-free items.</p>
-						<a href="https://www.amazon.com/dp/B013U7BJM2?&amp;linkCode=ll1&amp;tag=lapaz02-20&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener">
-							<img src="https://m.media-amazon.com/images/I/91ZS8-ByyOL._AC_SL1500_.jpg?tag=lapaz02-20" alt="Pie Face Game" class="merch-image">
-							<h4>Pie Face Game</h4>
-							<p>The hilarious Pie Face board game for family and friends</p>
-							<span class="shop-button">Shop on Amazon →</span>
-						</a>
+
+						<div class="amazon-deal-card">
+							<div class="deal-badge">
+								<span class="badge-icon">⭐</span>
+								<span class="badge-text">Top Amazon Pick</span>
+							</div>
+							<div class="deal-content">
+								<div class="deal-image-wrapper">
+									<a href="https://www.amazon.com/dp/B013U7BJM2?&amp;linkCode=ll1&amp;tag=lapaz02-20&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener">
+										<img src="https://m.media-amazon.com/images/I/91ZS8-ByyOL._AC_SL1500_.jpg?tag=lapaz02-20" alt="Hasbro Gaming: Pie Face Board Game" class="deal-image">
+									</a>
+								</div>
+								<div class="deal-info">
+									<div class="deal-rating">
+										<span class="stars">★★★★★</span>
+										<span class="rating-count">4.6 (18,400+ reviews)</span>
+									</div>
+									<h4 class="deal-title">
+										<a href="https://www.amazon.com/dp/B013U7BJM2?&amp;linkCode=ll1&amp;tag=lapaz02-20&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="nofollow noopener">
+											Hasbro Gaming: Pie Face Board Game
+										</a>
+									</h4>
+									<p class="deal-desc">The hilarious, laugh-out-loud game of suspense! Turn the handle and hope you don't get pie in the face.</p>
+									<div class="deal-action">
+										<a href="https://www.amazon.com/dp/B013U7BJM2?&amp;linkCode=ll1&amp;tag=lapaz02-20&amp;language=en_US&amp;ref_=as_li_ss_tl" class="amazon-cta-btn" target="_blank" rel="nofollow noopener">
+											<span class="btn-text">Check Price on Amazon</span>
+											<svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+												<line x1="5" y1="12" x2="19" y2="12"></line>
+												<polyline points="12 5 19 12 12 19"></polyline>
+											</svg>
+										</a>
+										<span class="prime-tag">✓ Prime Eligible</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 

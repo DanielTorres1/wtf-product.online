@@ -1692,17 +1692,18 @@
 			}
 		}
 
-		/* ===== Modern Amazon Showcase Card ===== */
+		/* ===== Compact Amazon Deal Card ===== */
 		.amazon-deal-card {
 			background: #ffffff;
-			border-radius: 20px;
-			padding: 24px;
-			margin-top: 30px;
-			box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(238, 9, 121, 0.06);
-			border: 1px solid rgba(238, 9, 121, 0.15);
+			border-radius: 12px;
+			padding: 12px 16px;
+			margin-top: 18px;
+			max-width: 390px;
+			box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(238, 9, 121, 0.04);
+			border: 1px solid rgba(238, 9, 121, 0.12);
 			position: relative;
 			overflow: hidden;
-			transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+			transition: all 0.25s ease;
 		}
 
 		.amazon-deal-card::before {
@@ -1711,104 +1712,94 @@
 			top: 0;
 			left: 0;
 			right: 0;
-			height: 4px;
+			height: 3px;
 			background: linear-gradient(90deg, #ee0979, #fc1c62, #ff6a00);
 		}
 
 		.amazon-deal-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 20px 45px rgba(238, 9, 121, 0.16), 0 8px 20px rgba(0, 0, 0, 0.08);
-			border-color: rgba(238, 9, 121, 0.35);
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(238, 9, 121, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+			border-color: rgba(238, 9, 121, 0.28);
 		}
 
 		.deal-badge {
 			display: inline-flex;
 			align-items: center;
-			gap: 6px;
+			gap: 4px;
 			background: linear-gradient(135deg, #ff6a00, #ee0979);
 			color: #ffffff;
-			font-size: 11px;
+			font-size: 10px;
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: 0.8px;
-			padding: 4px 12px;
-			border-radius: 30px;
-			margin-bottom: 16px;
-			box-shadow: 0 3px 10px rgba(238, 9, 121, 0.25);
+			letter-spacing: 0.5px;
+			padding: 2px 8px;
+			border-radius: 20px;
+			margin-bottom: 8px;
 		}
 
 		.deal-content {
 			display: flex;
 			align-items: center;
-			gap: 22px;
-		}
-
-		@media (max-width: 600px) {
-			.deal-content {
-				flex-direction: column;
-				text-align: center;
-			}
+			gap: 14px;
 		}
 
 		.deal-image-wrapper {
 			flex-shrink: 0;
-			width: 140px;
-			height: 140px;
+			width: 75px;
+			height: 75px;
 			background: #fbfbfd;
-			border-radius: 14px;
+			border-radius: 10px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 10px;
+			padding: 5px;
 			border: 1px solid #f0f0f5;
-			transition: transform 0.3s ease;
+			transition: transform 0.2s ease;
 		}
 
 		.amazon-deal-card:hover .deal-image-wrapper {
-			transform: scale(1.05);
+			transform: scale(1.04);
 		}
 
 		.deal-image {
 			max-width: 100%;
 			max-height: 100%;
 			object-fit: contain;
-			filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 		}
 
 		.deal-info {
 			flex: 1;
+			min-width: 0;
 		}
 
 		.deal-rating {
 			display: flex;
 			align-items: center;
-			gap: 8px;
-			margin-bottom: 6px;
-		}
-
-		@media (max-width: 600px) {
-			.deal-rating {
-				justify-content: center;
-			}
+			gap: 5px;
+			margin-bottom: 2px;
 		}
 
 		.deal-rating .stars {
 			color: #ffa41c;
-			letter-spacing: 2px;
-			font-size: 15px;
+			letter-spacing: 1px;
+			font-size: 12px;
 		}
 
 		.deal-rating .rating-count {
-			font-size: 13px;
+			font-size: 11px;
 			color: #767676;
 			font-weight: 500;
 		}
 
 		.deal-title {
-			margin: 0 0 6px 0;
-			font-size: 19px;
+			margin: 0 0 2px 0;
+			font-size: 14px;
 			font-weight: 700;
-			line-height: 1.35;
+			line-height: 1.25;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.deal-title a {
@@ -1822,43 +1813,42 @@
 		}
 
 		.deal-desc {
-			font-size: 14px;
-			color: #555566;
-			line-height: 1.5;
-			margin: 0 0 16px 0;
+			font-size: 11px;
+			color: #666;
+			line-height: 1.35;
+			margin: 0 0 8px 0;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
 		}
 
 		.deal-action {
 			display: flex;
 			align-items: center;
-			gap: 14px;
+			gap: 8px;
 			flex-wrap: wrap;
-		}
-
-		@media (max-width: 600px) {
-			.deal-action {
-				justify-content: center;
-			}
 		}
 
 		.amazon-cta-btn {
 			display: inline-flex;
 			align-items: center;
-			gap: 8px;
+			gap: 5px;
 			background: linear-gradient(135deg, #ff6a00, #ee0979);
 			color: #ffffff !important;
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 14px;
-			padding: 10px 22px;
-			border-radius: 50px;
-			box-shadow: 0 4px 14px rgba(238, 9, 121, 0.3);
-			transition: all 0.25s ease;
+			font-size: 11px;
+			padding: 5px 13px;
+			border-radius: 20px;
+			box-shadow: 0 2px 8px rgba(238, 9, 121, 0.22);
+			transition: all 0.2s ease;
 		}
 
 		.amazon-cta-btn:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 6px 20px rgba(238, 9, 121, 0.45);
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(238, 9, 121, 0.32);
 			background: linear-gradient(135deg, #ff512f, #fc1c62);
 			color: #ffffff !important;
 		}
@@ -1868,35 +1858,35 @@
 		}
 
 		.amazon-cta-btn:hover .btn-arrow {
-			transform: translateX(4px);
+			transform: translateX(3px);
 		}
 
 		.prime-tag {
-			font-size: 12px;
+			font-size: 10px;
 			font-weight: 600;
 			color: #007185;
-			background: rgba(0, 113, 133, 0.08);
-			padding: 4px 10px;
-			border-radius: 6px;
+			background: rgba(0, 113, 133, 0.07);
+			padding: 2px 6px;
+			border-radius: 4px;
 		}
 
 		.merch-image {
 			max-width: 100%;
 			height: auto;
 			object-fit: contain;
-			border-radius: 10px;
+			border-radius: 8px;
 		}
 
 		.shop-button {
 			display: inline-block;
 			background: linear-gradient(135deg, #ff6a00, #ee0979);
 			color: #ffffff !important;
-			padding: 10px 20px;
-			border-radius: 30px;
+			padding: 6px 14px;
+			border-radius: 20px;
 			font-weight: 600;
-			font-size: 14px;
+			font-size: 12px;
 			text-decoration: none;
-			transition: all 0.3s ease;
+			transition: all 0.2s ease;
 		}
 	</style>
 
@@ -2078,7 +2068,7 @@
 
 
 					<div class="wp-block-column is-vertically-aligned-center part-right is-layout-flow wp-block-column-is-layout-flow"
-						style="padding-right:60px;flex-basis:58%">
+						style="padding-right:140px;flex-basis:58%">
 						<p class="has-text-align-left has-text-color has-link-color wp-elements-b3163a8da250fb6deed01476b9a540cb"
 							style="color:#fc1c62;font-size:17px;text-transform:uppercase">WOMEN GIFTS</p>
 
